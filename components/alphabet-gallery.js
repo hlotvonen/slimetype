@@ -137,7 +137,7 @@ class AlphabetGallery extends HTMLElement {
             this.letters.forEach(letter => {
                 const imageNumber = this.getRandomImageNumber();
                 const container = this.createImageElement(
-                    `./assets/images/small/${letter}${imageNumber}.webp`,
+                    `/assets/images/small/${letter}${imageNumber}.webp`,
                     `${letter}${imageNumber}`,
                     letter  // Pass the letter for click handling
                 );
@@ -147,7 +147,7 @@ class AlphabetGallery extends HTMLElement {
         } else {
             for (let i = 1; i <= this.imagesPerLetter; i++) {
                 const container = this.createImageElement(
-                    `./assets/images/big/${letterFilter}${i}.webp`,
+                    `/assets/images/big/${letterFilter}${i}.webp`,
                     `${letterFilter}${i}`
                 );
                 gallery.appendChild(container);

@@ -88,7 +88,7 @@ class TypeTester extends HTMLElement {
         for(let i = 1; i > 4; i++) {
             letters.forEach(letter => {
                 const img = new Image();
-                img.src = `./assets/images/small/${letter}${i}.webp`;
+                img.src = `/assets/images/small/${letter}${i}.webp`;
                 this.preloadedImages.set(letter, img);
             });
         }
@@ -106,7 +106,7 @@ class TypeTester extends HTMLElement {
                 this.imageArea.appendChild(spaceDiv);
             } else if (/[A-Z]/.test(char)) {
                 const img = document.createElement('img');
-                img.src = `./assets/images/small/${char}${Math.floor(Math.random() * 3) + 1}.webp`;
+                img.src = `/assets/images/small/${char}${Math.floor(Math.random() * 3) + 1}.webp`;
                 img.alt = char;
                 this.imageArea.appendChild(img);
             }
