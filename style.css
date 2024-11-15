@@ -1,0 +1,130 @@
+@font-face {
+    font-family: 'SlimeFont';
+    src: url('./assets/fonts/SlimeFont-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+:root {
+    --color1: #96a036;
+
+    font-family: "SlimeFont", sans-serif;
+    font-size: 3vw;
+    line-height: 1.2;
+}
+body {
+    background-color: black;
+    color: white;
+}
+p a:not(:has(img)) {
+    background-color: white;
+    color:black;  
+}
+p + p {
+    margin-top: 1rem;
+}
+/*utils*/
+.flex {
+    display: flex;
+}
+.flex > * {
+    flex:1;
+}
+.button {
+    padding: 0.25rem;
+    width: fit-content;
+    background:
+        linear-gradient(transparent 0 20px, black 0 calc(100% - 20px), transparent 0 100%),
+        linear-gradient(to left, transparent 0 20px, black 0 calc(100% - 20px), transparent 0 100%),
+        linear-gradient(white 0 1px, transparent 0 calc(100% - 1px), white 0 100%),
+        linear-gradient(to left, white 0 1px, transparent 0 calc(100% - 1px), white 0 100%),
+        black
+    ;
+}
+
+/*general layout*/
+section {
+    font-size: 1rem;
+    position: relative;
+    background: linear-gradient(to bottom, black, var(--color1), black);
+}
+section header {
+    position: sticky;
+    top: 0px;
+    padding: 0.5rem 1rem;
+    background: linear-gradient(to bottom, black, transparent);
+    color: var(--color1);
+}
+section .content {
+    padding: 0 1rem 1rem 1rem;
+}
+
+/* a fever dream */
+section#afeverdream .intro {
+    font-size: 2em;
+    text-wrap: balance;
+    margin: 1rem 0;
+}
+section#afeverdream .more-intro {
+    padding-bottom: 1rem;
+}
+section#afeverdream .more-intro-icons {
+    flex-direction: column;
+    justify-content: space-between;
+}
+section#afeverdream .more-intro-icons div {
+    flex-grow: 0;
+}
+section#afeverdream .more-intro-icons img {
+    height: auto;
+}
+section#afeverdream .more-intro .a-icon{
+    width: 3rem;
+    height: auto;
+    background: linear-gradient(to bottom, transparent, var(--color1), transparent);
+    fill: black;
+    align-self: flex-end;
+    flex: 0 auto;
+    margin: 0 1rem;
+}
+section#afeverdream .more-intro p {
+    flex: 2;
+}
+
+alphabet-gallery {
+    display: block;
+    margin:1rem 0;
+}
+
+section#acknowledgements p {
+    font-size: 0.5rem;
+ }
+
+/* type tester */
+.upright-text {
+    width: 100%;
+    padding: 0.5rem;
+    background: linear-gradient(to left, transparent, var(--color1), transparent);
+    color: black;
+    writing-mode: vertical-rl;
+    text-orientation: sideways;
+    height: 10rem;
+    font-size: 1rem;
+    display: grid;
+    place-content: center;
+    text-decoration: underline;
+    line-height: 1.1;
+}
+
+.grafialogo {
+    display: inline-block;
+    margin-left: 0.25rem;
+    height: 2rem;
+    width: auto;
+}
+.context-info {
+    font-size: 0.5rem;
+    display: flex;
+    padding: 1rem 0;
+    gap:0.5rem
+}
