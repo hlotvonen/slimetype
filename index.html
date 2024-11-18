@@ -6,7 +6,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
-    <script type="module" src="./components/typetester2.js"></script>
+    <script type="module" src="./components/typetester.js"></script>
     <script type="module" src="./components/alphabet-gallery.js"></script>
 </head>
 <body>
@@ -27,7 +27,15 @@
                         </svg>
                         <div>
                             <img src="./assets/images/small/A4.webp">
-                            <div class="button">MAKING OF VIDEO &rtri;</div>
+                            <div class="button playvideo">MAKING OF VIDEO <img class="icon" src="./assets/images/play.svg" alt=""></div>
+                            <dialog open>
+                                <div class="modal-content">
+                                    <span class="close">&times;</span>
+                                    <video controls id="slimevideo">
+                                        <source src="./assets/videos/slimetype.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                            </dialog>         
                         </div>
                     </div>
                     <p>
@@ -37,54 +45,6 @@
             </div>
         </section>
 
-        <!--section id="lettherebemoisture"-->
-            <!--(VIDEO & INFO )-->
-            <!--
-            <header>
-                <h1>LET THERE BE MOISTURE</h1>
-            </header>
-        
-            <svg width="100%" height="100%" viewBox="0 0 1920 1080" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" fill="transparent">
-                <path id="text_path" d="
-                    M64,64l448,0
-                    M64,128l448,0 
-                    M64,192l448,0
-                    M64,256l448,0
-                    M64,320l448,0
-                    M64,384l448,0
-                    M64,448l384,0l0,576l192,0l0,-896l320,0l0,384l-192,0l0,512l128,0l0,-320l128,0l0,320l320,0l0,-192l-192,0l0,-704l128,0l0,512l128,0l0,-256l448,0
-                    M1472,448l384,0
-                    M1472,512l384,0
-                    M1472,576l384,0
-                    M1472,640l384,0
-                    M1472,704l384,0
-                    M1472,768l384,0
-                    M1472,832l384,0
-                    M1472,896l384,0
-                    M1472,960l384,0
-                    M1472,1024l384,0"
-                />
-                <text font-size="50" fill="white" textLength="14900" lengthAdjust="spacing">
-                    <textPath xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#text_path" startOffset="0%">
-                        THE SLIME MOLD PHYSARUM POLYCEPHALUM IS A FREE LIVING ACELLULAR SINGLE CELLED ORGANISM AND A MEMBER OF THE MYXOMYCETES GROUP THEY ARE CONSIDERED INTELLIGENT AND EFFICIENT SPATIAL PROBLEM SOLVERS WHO CAN FIND THE MOST EFFICIENT WAYS TO GET TO THEIR SOURCES OF NUTRITION THE IDEA WAS TO PRESENT THE BLOB WITH THE ENGLISH LETTERS IN THE FORM OF NUTRITION AND DOCUMENT THE PATH IT UNDERGOES TO GET TO ITS FOOD SOURCE AND IN DOING SO CREATE NEW UNIQUE LETTERS DERIVED FROM THE LATIN ALPHABET RECREATING HUMAN ALPHABETIC HISTORY IN THE PRESENT TIME WITHOUT THE PREREQUISITE OF HUMAN INTELLIGENCE BUT BY DEPENDING ON THE MICROORGANISMS NONHUMAN INTELLIGENCE
-                        <!--animate attributeName="startOffset" from="0%" to="100%" dur="600s" repeatCount="indefinite"/-->
-                    <!--</textPath>
-                </text>
-            </svg>
-        </section>
-        -->
-        <!--
-        <section class="upright-text">
-        -->
-            <!--(upright text)
-            THE MICRO-CULTURES WERE PRESENTED WITH A BASIC STRUCTURE OF THE LATIN CHARACTERS AS OAT FLAKES CREATED WITHIN A FIVE BY FIVE OR NINE BY NINE GRID SYSTEM PLACED WITHIN AGAR FILLED PETRI DISHES TO PROVIDE THE MOISTURE NEEDED FOR THE MICROORGANISM TO STAY ACTIVE THE BLOB NAVIGATED AROUND THE AGAR DISH SEARCHING FOR NUTRITION LEAVING SELFPRODUCED NONLIVING EXTRACELLULAR SLIME TRAILS CREATING A NEW ALPHABET SINGULAR TO THE SLIME MODE CULTURE IN USE
-        </section>
-        -->
-        <!--
-        <section>        
-            THE PROCESS IS DIRECTLY INSPIRED BY HOW HUMAN LANGUAGE AND LETTERS EVOLVED THROUGHOUT HISTORY BY RECREATING THIS PROCESS WITH THE SLIME MOLD WE WILL WITNESS HOW A NEW DIFFERENT NONHUMAN CIVILIZATION CAN EMBRACE THE NATURAL AND UNPREDICTABLE EVOLUTION OF LANGUAGE IN ITS OWN RIGHT
-        </section>
-        -->
         <section>
             <header>
                 <h1>SLIMETYPE</h1>
@@ -96,33 +56,81 @@
                 <div class="context-info">
                     <p>
                         ANCIENT CULTURES TOOK ALPHABETS FROM NEIGHBORING CIVILIZATIONS MODIFYING THEM TO FIT THEIR LINGUISTIC NEEDS AND PREFERENCES AND SO THE MULTITUDES OF ALPHABETS OF THE WORLD WERE BORN MOVING THROUGH THE NATURAL PROGRESSION OF ALPHABETS AND LANGUAGE EVOLUTION WE CONSIDERED THE BLOB ITS PRIMITIVE CIVILIZATION ON THE VERGE OF CULTURAL AND LINGUISTIC DEVELOPMENTS BY GIVING SLIME MOLD THE BUILDING BLOCKS OF THE ENGLISH CHARACTER SET WE WILL OBSERVE THE CREATION AND EVOLUTION OF THEIR LANGUAGE PATTERNS AND ALPHABETS AS WE ONCE DID IN THE PAST AS HUMAN BEINGS
-                    </p>
-                    <p>
+                        <br>
                         THE SLIME MOLD PHYSARUM POLYCEPHALUM IS A FREE LIVING ACELLULAR SINGLE CELLED ORGANISM AND A MEMBER OF THE MYXOMYCETES GROUP THEY ARE CONSIDERED INTELLIGENT AND EFFICIENT SPATIAL PROBLEM SOLVERS WHO CAN FIND THE MOST EFFICIENT WAYS TO GET TO THEIR SOURCES OF NUTRITION THE IDEA WAS TO PRESENT THE BLOB WITH THE ENGLISH LETTERS IN THE FORM OF NUTRITION AND DOCUMENT THE PATH IT UNDERGOES TO GET TO ITS FOOD SOURCE AND IN DOING SO CREATE NEW UNIQUE LETTERS DERIVED FROM THE LATIN ALPHABET RECREATING HUMAN ALPHABETIC HISTORY IN THE PRESENT TIME WITHOUT THE PREREQUISITE OF HUMAN INTELLIGENCE BUT BY DEPENDING ON THE MICROORGANISMS NONHUMAN INTELLIGENCE
                     </p>
                 </div>
-                <p class="upright-text">
-                    THE PROCESS IS DIRECTLY INSPIRED BY HOW HUMAN LANGUAGE AND LETTERS EVOLVED THROUGHOUT HISTORY BY RECREATING THIS PROCESS WITH THE SLIME MOLD WE WILL WITNESS HOW A NEW DIFFERENT NONHUMAN CIVILIZATION CAN EMBRACE THE NATURAL AND UNPREDICTABLE EVOLUTION OF LANGUAGE IN ITS OWN RIGHT
-                </p>
             </div>
         </section>
     
+        <section id="download">
+            <header>
+                <h1>DOWNLOAD</h1>
+            </header>
+            <div class="content">
+                <p>
+                    DOWNLOAD SLIMETYPE
+                </p>
+                <div class="download-images">
+                    <img src="./assets/images/small/D2.webp" alt="D">
+                    <img src="./assets/images/small/O1.webp" alt="O">
+                    <img src="./assets/images/small/W3.webp" alt="W">
+                    <img src="./assets/images/small/N2.webp" alt="N">
+                    <img src="./assets/images/small/L1.webp" alt="L">
+                    <img src="./assets/images/small/O2.webp" alt="O">
+                    <img src="./assets/images/small/A3.webp" alt="A">
+                    <img src="./assets/images/small/D3.webp" alt="D">
+                </div>
+                <div class="button"><a href="./assets/fonts/SlimeFont-Regular.otf" download>DOWNLOAD OTF <img class="icon" src="./assets/images/download.svg" alt=""></a></div>
+            </div>
+        </section>
+
+        <div>
+            <p class="upright-text">
+                THE PROCESS IS DIRECTLY INSPIRED BY HOW HUMAN LANGUAGE AND LETTERS EVOLVED THROUGHOUT HISTORY BY RECREATING THIS PROCESS WITH THE SLIME MOLD WE WILL WITNESS HOW A NEW DIFFERENT NONHUMAN CIVILIZATION CAN EMBRACE THE NATURAL AND UNPREDICTABLE EVOLUTION OF LANGUAGE IN ITS OWN RIGHT
+            </p>
+        </div>
+
+
         <section id="acknowledgements">
             <header>
                 <h1>ACKNOWLEDGMENTS</h1>
             </header>
             <div class="content">
                 <p>
-                    THIS PROJECT IS A TYPOGRAPHIC EXPERIMENT BY <a href="" target="_blank">HARES BASSIL</a> THE PROJECT COULD HAVE NEVER HAPPENED WITHOUT THE COLLABORATIVE SUPPORT OF MANY FRIENDS AND COLLEAGUES FIRSTLY I WOULD LIKE TO THANK <a href="" target="_blank">CHIARA ALISSA ESTIVARIZ LOPEZ</a> FOR INTRODUCING ME TO THE WONDERFUL WORLD OF SLIME MOLD AND TEACHING ME THE INS AND OUTS OF WORKING WITH THE BLOB I WOULD ALSO LIKE TO THANK <a href="" target="_blank">LARISA CHERNYAEVA AND THE BIOFILIA LAB AT AALTO UNIVERSITY</a> FOR SHARING THEIR RESOURCES AND STICKING WITH ME DURING THE TRIAL AND ERROR PHASE OF THIS PROECT 
+                    THIS PROJECT IS A TYPOGRAPHIC EXPERIMENT BY <a href="" target="_blank">HARES BASSIL <img class="icon" src="./assets/images/external-link.svg" alt=""></a> THE PROJECT COULD HAVE NEVER HAPPENED WITHOUT THE COLLABORATIVE SUPPORT OF MANY FRIENDS AND COLLEAGUES FIRSTLY I WOULD LIKE TO THANK <a href="" target="_blank">CHIARA ALISSA ESTIVARIZ LOPEZ <img class="icon" src="./assets/images/external-link.svg" alt=""></a> FOR INTRODUCING ME TO THE WONDERFUL WORLD OF SLIME MOLD AND TEACHING ME THE INS AND OUTS OF WORKING WITH THE BLOB I WOULD ALSO LIKE TO THANK <a href="https://www.aalto.fi/en/biofilia" target="_blank">LARISA CHERNYAEVA AND THE BIOFILIA LAB AT AALTO UNIVERSITY <img class="icon" src="./assets/images/external-link.svg" alt=""></a> FOR SHARING THEIR RESOURCES AND STICKING WITH ME DURING THE TRIAL AND ERROR PHASE OF THIS PROECT 
                 </p>
                 <p>
-                    A HUGE THANKS GOES TO  <a href="" target="_blank">JUHA KOIVUSALO</a> FOR BEING READY TO CAPTURE THE EVERCHANGING SLIME TRAILS FORMING THE BLOB LETTERS I WOULD ALSO LIKE TO THANK  <a href="" target="_blank">PIHLA LEMMETYINEN</a> FOR FILMING THE STORY AND THE PROCESS OF THIS PROECT FINALLY I WOULD ALSO LIKE TO THANK  <a href="https://heikkilotvonen.com/" target="_blank">HEIKKI LOTVONEN</a> FOR DEVELOPING THIS WEBSITE AND HELPING MAKE THIS PROECT HAPPEN
+                    A HUGE THANKS GOES TO  <a href="https://juhakoivusalo.com" target="_blank">JUHA KOIVUSALO <img class="icon" src="./assets/images/external-link.svg" alt=""></a> FOR BEING READY TO CAPTURE THE EVERCHANGING SLIME TRAILS FORMING THE BLOB LETTERS I WOULD ALSO LIKE TO THANK  <a href="https://studiolemlem.com" target="_blank">PIHLA LEMMETYINEN <img class="icon" src="./assets/images/external-link.svg" alt=""></a> FOR FILMING THE STORY AND THE PROCESS OF THIS PROECT FINALLY I WOULD ALSO LIKE TO THANK  <a href="https://heikkilotvonen.com/" target="_blank">HEIKKI LOTVONEN <img class="icon" src="./assets/images/external-link.svg" alt=""></a> FOR DEVELOPING THIS WEBSITE AND HELPING MAKE THIS PROECT HAPPEN
                 </p>
-    
-                <p>THIS PROJECT WAS FUNDED BY <a href="https://grafia.fi/" target="_blank">GRAFIA RY</a><a href="https://grafia.fi/" target="_blank"><img class="grafialogo" src="./assets/images/grafia-logo_vektori.svg" alt="Grafia logo"></a></p>
             </div>
         </section>
+        <footer>
+            <p>THIS PROJECT WAS FUNDED BY <a href="https://grafia.fi/" target="_blank">GRAFIA RY <img class="icon" src="./assets/images/external-link.svg" alt=""></a><a href="https://grafia.fi/" target="_blank"><img class="grafialogo" src="./assets/images/grafia-logo_vektori.svg" alt="Grafia logo"></a></p>
+        </footer>
     </main>
+    <script>
+        const modal = document.querySelector('dialog');
+        const btn = document.querySelector('.playvideo');
+        const close = document.querySelector('.close');
+        const video = document.querySelector('#slimevideo');
+    
+        const stopVideo = () => {
+            video.pause();
+            video.currentTime = 0;
+        }
+        btn.onclick = () => modal.style.display = 'grid';
+        close.onclick = () => {
+            modal.style.display = 'none';
+            stopVideo();
+        }
+        window.onclick = (e) => {
+            if (e.target === modal) {
+                modal.style.display = 'none';
+                stopVideo();
+            }
+        }
+    </script>
 </body>
 </html>
 

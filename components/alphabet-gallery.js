@@ -32,6 +32,7 @@ class AlphabetGallery extends HTMLElement {
                     color: white;
                     cursor: pointer;
                     border-radius: 4px;
+                    font-family:monospace;
                 }
                 button:hover {
                     background: white;
@@ -41,11 +42,13 @@ class AlphabetGallery extends HTMLElement {
                     display:flex;
                     justify-content:center;
                     flex-wrap: wrap;
-                    gap: 0.25rem;
-                    padding: 0.25rem;
                 }
                 .image-container {
                     flex: 1;
+                    display:flex;
+                    align-items:center;
+                    position:relative;
+                    background: radial-gradient(circle closest-side at center, rgba(0 0 0 / 50%), transparent);
                 }
                 .all-gallery {
                     flex-basis: 10%;
@@ -57,11 +60,37 @@ class AlphabetGallery extends HTMLElement {
                 }
                 img {
                     width: 100%;
-                    height: 100%;
                     object-fit: contain;
-                    display: none;
+                    color:transparent;
                     cursor: pointer;
+                    border-radius:0.5rem;
+                    position:relative;
+                    z-index:2;
                 }
+                .loading::after {
+                    content:'';
+                    display;block;
+                    position:absolute;
+                    top:50%;
+                    left:50%;
+                    translate:-50% -50%;
+                    width: 30px;
+                    height: 30px;
+                    border: 2px solid white;
+                    border-bottom-color: transparent;
+                    border-radius: 50%;
+                    animation: rotation 1s linear infinite;
+                }
+
+                @keyframes rotation {
+                    0% {
+                        transform: rotate(0deg);
+                    }
+                    100% {
+                        transform: rotate(360deg);
+                    }
+                } 
+                
                 img.loaded {
                     display: block;
                 }
@@ -71,6 +100,15 @@ class AlphabetGallery extends HTMLElement {
                     display: grid;
                     place-content: center;
                     font-size: 6rem;
+                }
+                @media screen and (max-width: 800px) {
+                    .image-container.all-gallery {
+                        flex-basis: 30%;
+                    }
+                    .image-container {
+                        flex-grow:0;
+                        flex-basis: 50%;
+                    }
                 }
             </style>
             <div class="controls">
@@ -101,10 +139,11 @@ class AlphabetGallery extends HTMLElement {
     createImageElement(src, alt, letter = null) {
         const container = document.createElement('div');
         container.className = 'image-container';
+        container.classList.add('loading');
 
         const img = document.createElement('img');
         img.addEventListener('load', () => {
-            img.classList.add('loaded');
+            container.classList.remove('loading');
         });
         
         img.addEventListener('error', () => {
