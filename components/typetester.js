@@ -20,9 +20,8 @@ class TypeTester extends HTMLElement {
                 height:100%;
                 height: 50dvh;
             }
-
             .type-tester .text-mode {
-                flex: 1;
+                flex: 10;
                 padding: 0.25rem;
                 font-size: 1rem;
                 background:black;
@@ -32,14 +31,18 @@ class TypeTester extends HTMLElement {
                 position:relative;
             }
             .type-tester .image-mode {
-                flex:1;
+                flex:11;
                 padding: 0.25rem;
                 overflow-y: auto;
                 display: flex;
                 flex-wrap: wrap;
                 gap: 0.25rem;
                 align-content:flex-start;
-                background: linear-gradient(to right, var(--color1), black);
+                background: linear-gradient(
+                    to right,
+                    black,
+                    var(--color1)
+                );
             }
             .type-tester .image-mode img {
                 height:1.5rem;
@@ -51,9 +54,10 @@ class TypeTester extends HTMLElement {
             }
             .type-tester .empty::before {
                 content: "Type here...";
+                text-transform: lowercase;
+                font-family: 'IBM Plex Mono';
                 position:absolute;
                 width:max-content;
-                font-family:monospace;
                 color:#333;
             }
             @media screen and (max-width: 800px) {
@@ -61,9 +65,11 @@ class TypeTester extends HTMLElement {
                     height:80dvh;
                     flex-direction:column;
                 }
+                .type-tester .text-mode {
+                    }
                 .type-tester .image-mode {
-                    background: linear-gradient(to bottom, var(--color1), black);
-                }
+                    background: linear-gradient(to top, var(--color1), black);
+                    }
             }
         `;
         this.appendChild(style);

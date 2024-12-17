@@ -24,6 +24,7 @@ class AlphabetGallery extends HTMLElement {
                     border-right: 1px solid white;
                     width:fit-content;
                     padding:0 0.25rem;
+                    font-family: 'IBM Plex Mono';
                 }
                 button {
                     padding: 0.25rem;
@@ -32,7 +33,6 @@ class AlphabetGallery extends HTMLElement {
                     color: white;
                     cursor: pointer;
                     border-radius: 4px;
-                    font-family:monospace;
                 }
                 button:hover {
                     background: white;
@@ -100,6 +100,7 @@ class AlphabetGallery extends HTMLElement {
                     display: grid;
                     place-content: center;
                     font-size: 6rem;
+                    margin-top: -0.33ch;
                 }
                 @media screen and (max-width: 800px) {
                     .image-container.all-gallery {

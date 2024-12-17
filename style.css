@@ -5,9 +5,15 @@
     font-style: normal;
     font-display: swap;
 }
+@font-face {
+    font-family: 'IBM Plex Mono';
+    src: url('./assets/fonts/IBMPlexMono-Regular-Latin1.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
 :root {
     --color1: #96a036;
-
     font-family: "SlimeFont", sans-serif;
     font-size: 3vw;
     line-height: 1.2;
@@ -44,6 +50,9 @@ p + p {
     ;
     position: relative;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap:0.5rem;
 }
 .button:hover::after {
     content: '';
@@ -59,6 +68,7 @@ p + p {
 }
 
 .icon {
+    vertical-align: baseline;
     height: 0.75em;
     display: inline;
 }
@@ -83,7 +93,7 @@ section .content {
 }
 footer {
     font-size: 0.5rem;
-    padding: 1rem 1rem;
+    padding: 3rem 1rem 1rem;
 }
 /* a fever dream */
 section#afeverdream .intro {
@@ -98,13 +108,22 @@ section#afeverdream .more-intro-icons {
     flex-direction: column;
     justify-content: space-between;
 }
-section#afeverdream .more-intro-icons div {
+section#afeverdream .more-intro-icons .a-image{
+    margin-bottom: 1rem;
+}
+section#afeverdream .more-intro-icons .playvideo{
+    align-self: flex-start;
+}
+section#afeverdream .more-intro-icons > div {
+    flex-direction: column;
+    align-items: center;
+    width: fit-content;
     flex-grow: 0;
 }
 :where(section#afeverdream .more-intro-icons img) {
     height: auto;
 }
-section#afeverdream .more-intro .a-icon{
+section#afeverdream .more-intro .a-icon {
     width: 3rem;
     height: auto;
     background: linear-gradient(to bottom, transparent, var(--color1), transparent);
@@ -145,25 +164,35 @@ section#download .content {
     gap:0.5rem;
     flex: 1;
     padding:3rem 0 5rem;
-}    
+} 
+section#download .ofl {
+    font-family: 'IBM Plex Mono';
+    font-size: 0.3rem;
+    padding: 0.5rem 0;
+    text-align: center;
+}
+section#acknowledgements {
+    background: black;
+}
 section#acknowledgements p {
     font-size: 0.5rem;
     line-height: 1.5;
+}
+ .dish-type {
+    vertical-align: bottom;
+    height: 0.75rem;
+    display: inline;
  }
-
 /* type tester */
 .upright-text {
     width: 100%;
-    padding: 0.5rem;
-    background: linear-gradient(to left, transparent, var(--color1), transparent);
+    background: linear-gradient(to bottom, transparent, var(--color1), transparent);
     color: black;
     writing-mode: vertical-lr;
     text-orientation: sideways;
     height: min-content;
     font-size: 2rem;
-    display: grid;
-    place-content: center;
-    text-decoration: underline overline;
+    text-decoration-line: underline;
     text-decoration-thickness: 0.04em;
     text-decoration-skip-ink: none;
     line-height: 1;
