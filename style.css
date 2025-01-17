@@ -93,7 +93,7 @@ section .content {
 }
 footer {
     font-size: 0.5rem;
-    padding: 4rem 1rem 2rem;
+    padding: 4rem 1rem 1rem;
 }
 /* a fever dream */
 section#afeverdream .intro {
@@ -173,6 +173,7 @@ section#download .ofl {
 }
 section#acknowledgements {
     background: black;
+    padding-top: 2rem;
 }
 section#acknowledgements .content {
     padding-top: 0.3rem;
