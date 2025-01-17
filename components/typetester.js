@@ -59,17 +59,16 @@ class TypeTester extends HTMLElement {
                 position:absolute;
                 width:max-content;
                 color:#333;
+                font-size: 0.7rem;
             }
             @media screen and (max-width: 800px) {
                 .type-tester .content-container {
                     height:80dvh;
                     flex-direction:column;
                 }
-                .type-tester .text-mode {
-                    }
                 .type-tester .image-mode {
                     background: linear-gradient(to top, var(--color1), black);
-                    }
+                }
             }
         `;
         this.appendChild(style);

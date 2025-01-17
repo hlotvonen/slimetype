@@ -9,8 +9,8 @@ class AlphabetGallery extends HTMLElement {
     connectedCallback() {
         this.render();
         this.setupEventListeners();
-        // Display ALL view by default
         this.displayImages('ALL');
+        this.shadowRoot.querySelector('button[data-letter="ALL"]').classList.add('active');
     }
 
     render() {
@@ -32,11 +32,9 @@ class AlphabetGallery extends HTMLElement {
                     background: transparent;
                     color: white;
                     cursor: pointer;
-                    border-radius: 4px;
                 }
-                button:hover {
-                    background: white;
-                    color:black;
+                button:hover, button.active {
+                    background: linear-gradient(to bottom, var(--color1), transparent, var(--color1));
                 }
                 .gallery {
                     display:flex;
@@ -100,7 +98,7 @@ class AlphabetGallery extends HTMLElement {
                     display: grid;
                     place-content: center;
                     font-size: 6rem;
-                    margin-top: -0.33ch;
+                    margin-top: 0;
                 }
                 @media screen and (max-width: 800px) {
                     .image-container.all-gallery {
@@ -109,6 +107,11 @@ class AlphabetGallery extends HTMLElement {
                     .image-container {
                         flex-grow:0;
                         flex-basis: 50%;
+                    }
+                    .letter {
+                        padding: 0;
+                        line-height: 1;
+                        font-size: 39vw;
                     }
                 }
             </style>
@@ -127,6 +130,8 @@ class AlphabetGallery extends HTMLElement {
         buttons.forEach(button => {
             button.addEventListener('click', (event) => {
                 event.preventDefault();
+                buttons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
                 const letter = button.dataset.letter;
                 this.displayImages(letter);
             });

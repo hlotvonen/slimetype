@@ -26,7 +26,7 @@ p a:not(:has(img:not(.icon))) {
     border-bottom: 0.03rem solid white;
 }
 p a:not(:has(img:not(.icon))):hover {
-    outline: 0.03rem solid white;
+    background: linear-gradient(to bottom, var(--color1), transparent, var(--color1));
 }
 p + p {
     margin-top: 1rem;
@@ -93,7 +93,7 @@ section .content {
 }
 footer {
     font-size: 0.5rem;
-    padding: 3rem 1rem 1rem;
+    padding: 4rem 1rem 2rem;
 }
 /* a fever dream */
 section#afeverdream .intro {
@@ -173,6 +173,9 @@ section#download .ofl {
 }
 section#acknowledgements {
     background: black;
+}
+section#acknowledgements .content {
+    padding-top: 0.3rem;
 }
 section#acknowledgements p {
     font-size: 0.5rem;
@@ -276,9 +279,11 @@ video {
     }
     .context-info {
         columns: 2;
+        font-size: 0.75rem;
     }
     section#afeverdream .intro {
-        line-height: 1;
+        line-height: 1.1;
+        font-size: 1.25rem;
     }
 }
 @media screen and (max-width: 600px) {
